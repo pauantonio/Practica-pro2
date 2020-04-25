@@ -1,0 +1,26 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c11",
+            "cppStandard": "c++11",
+            "intelliSenseMode": "clang-x64",
+            "compilerArgs": [
+                "-D_JUDGE_",
+                "-DNDEBUG",
+                "-O2",
+                "-Wall",
+                "-Wextra",
+                "-Werror",
+                "-Wno-sign-compare",
+                "-Wshadow"
+            ]
+        }
+    ],
+    "version": 4
+}

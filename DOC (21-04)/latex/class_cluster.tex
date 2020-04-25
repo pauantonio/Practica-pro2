@@ -1,0 +1,160 @@
+\hypertarget{class_cluster}{}\section{Cluster Class Reference}
+\label{class_cluster}\index{Cluster@{Cluster}}
+
+
+Representa un clúster.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_cluster_ac81cfcf15eac35bd1c3d8802ec044a5f}{Cluster} (string id1)
+\begin{DoxyCompactList}\small\item\em Creadora amb un únic identificador. \end{DoxyCompactList}\item 
+\hyperlink{class_cluster_a3a657a86432eb76d41831b44a94e99d0}{Cluster} (string id1, string id2)
+\begin{DoxyCompactList}\small\item\em Creadora amb dos identificadors. \end{DoxyCompactList}\item 
+\hyperlink{class_cluster_a4bddfc88ac859610acab15dd12851b58}{$\sim$\+Cluster} ()
+\begin{DoxyCompactList}\small\item\em Destructora per defecte. \end{DoxyCompactList}\item 
+string \hyperlink{class_cluster_a040da4a393c7fcb8ac7edbe5b82679cf}{consultar\+\_\+id} () const
+\begin{DoxyCompactList}\small\item\em Consultora de l\textquotesingle{}identificador del clúster. \end{DoxyCompactList}\item 
+string \hyperlink{class_cluster_ab9281dd9b122de1d367f8c01bad027dd}{consultar\+\_\+id\+\_\+esq} () const
+\begin{DoxyCompactList}\small\item\em Consultora de l\textquotesingle{}identificador del fill esquerre del clúster. \end{DoxyCompactList}\item 
+string \hyperlink{class_cluster_a52cb76611eb859cf14f8ad3bba54d994}{consultar\+\_\+id\+\_\+dret} () const
+\begin{DoxyCompactList}\small\item\em Consultora de l\textquotesingle{}identificador del fill dret del clúster. \end{DoxyCompactList}\item 
+void \hyperlink{class_cluster_addf8d8d2beb59cf5b5fd7e0eed491e7e}{llegir} ()
+\begin{DoxyCompactList}\small\item\em Operació de lectura. \end{DoxyCompactList}\item 
+void \hyperlink{class_cluster_aae67c144fc543eace946dc8a651b5b7a}{escriure} () const
+\begin{DoxyCompactList}\small\item\em Operació d\textquotesingle{}escriptura. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Representa un clúster. 
+
+Definition at line 17 of file Cluster.\+hh.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_cluster_ac81cfcf15eac35bd1c3d8802ec044a5f}\label{class_cluster_ac81cfcf15eac35bd1c3d8802ec044a5f}} 
+\index{Cluster@{Cluster}!Cluster@{Cluster}}
+\index{Cluster@{Cluster}!Cluster@{Cluster}}
+\subsubsection{\texorpdfstring{Cluster()}{Cluster()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Cluster\+::\+Cluster (\begin{DoxyParamCaption}\item[{string}]{id1 }\end{DoxyParamCaption})}
+
+
+
+Creadora amb un únic identificador. 
+
+\begin{DoxyPrecond}{Precondition}
+Identificador no buit, pertanyent a una espècie del conjunt d\textquotesingle{}espècies 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+El resultat és un clúster amb una única espècie amb identificador \char`\"{}id\char`\"{} = \char`\"{}id1\char`\"{} 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_cluster_a3a657a86432eb76d41831b44a94e99d0}\label{class_cluster_a3a657a86432eb76d41831b44a94e99d0}} 
+\index{Cluster@{Cluster}!Cluster@{Cluster}}
+\index{Cluster@{Cluster}!Cluster@{Cluster}}
+\subsubsection{\texorpdfstring{Cluster()}{Cluster()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Cluster\+::\+Cluster (\begin{DoxyParamCaption}\item[{string}]{id1,  }\item[{string}]{id2 }\end{DoxyParamCaption})}
+
+
+
+Creadora amb dos identificadors. 
+
+\begin{DoxyPrecond}{Precondition}
+Identificadors \char`\"{}id1\char`\"{} i \char`\"{}id2\char`\"{} no buits, pertanyents a dos clústers 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+El resultat és un clúster, que conté dos clústers, amb identificador \char`\"{}id\char`\"{} = \char`\"{}id1\char`\"{}$\ast$\char`\"{}id2\char`\"{} 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_cluster_a4bddfc88ac859610acab15dd12851b58}\label{class_cluster_a4bddfc88ac859610acab15dd12851b58}} 
+\index{Cluster@{Cluster}!````~Cluster@{$\sim$\+Cluster}}
+\index{````~Cluster@{$\sim$\+Cluster}!Cluster@{Cluster}}
+\subsubsection{\texorpdfstring{$\sim$\+Cluster()}{~Cluster()}}
+{\footnotesize\ttfamily Cluster\+::$\sim$\+Cluster (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructora per defecte. 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_cluster_a040da4a393c7fcb8ac7edbe5b82679cf}\label{class_cluster_a040da4a393c7fcb8ac7edbe5b82679cf}} 
+\index{Cluster@{Cluster}!consultar\+\_\+id@{consultar\+\_\+id}}
+\index{consultar\+\_\+id@{consultar\+\_\+id}!Cluster@{Cluster}}
+\subsubsection{\texorpdfstring{consultar\+\_\+id()}{consultar\_id()}}
+{\footnotesize\ttfamily string Cluster\+::consultar\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Consultora de l\textquotesingle{}identificador del clúster. 
+
+\begin{DoxyPrecond}{Precondition}
+{\itshape cert} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+El resultat és l\textquotesingle{}identificador del paràmetre implícit 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_cluster_ab9281dd9b122de1d367f8c01bad027dd}\label{class_cluster_ab9281dd9b122de1d367f8c01bad027dd}} 
+\index{Cluster@{Cluster}!consultar\+\_\+id\+\_\+esq@{consultar\+\_\+id\+\_\+esq}}
+\index{consultar\+\_\+id\+\_\+esq@{consultar\+\_\+id\+\_\+esq}!Cluster@{Cluster}}
+\subsubsection{\texorpdfstring{consultar\+\_\+id\+\_\+esq()}{consultar\_id\_esq()}}
+{\footnotesize\ttfamily string Cluster\+::consultar\+\_\+id\+\_\+esq (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Consultora de l\textquotesingle{}identificador del fill esquerre del clúster. 
+
+\begin{DoxyPrecond}{Precondition}
+El clúster està format per dos cústers 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+El resultat és l\textquotesingle{}identificador del fill esquerre del clúster 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_cluster_a52cb76611eb859cf14f8ad3bba54d994}\label{class_cluster_a52cb76611eb859cf14f8ad3bba54d994}} 
+\index{Cluster@{Cluster}!consultar\+\_\+id\+\_\+dret@{consultar\+\_\+id\+\_\+dret}}
+\index{consultar\+\_\+id\+\_\+dret@{consultar\+\_\+id\+\_\+dret}!Cluster@{Cluster}}
+\subsubsection{\texorpdfstring{consultar\+\_\+id\+\_\+dret()}{consultar\_id\_dret()}}
+{\footnotesize\ttfamily string Cluster\+::consultar\+\_\+id\+\_\+dret (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Consultora de l\textquotesingle{}identificador del fill dret del clúster. 
+
+\begin{DoxyPrecond}{Precondition}
+El clúster està format per dos cústers 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+El resultat és l\textquotesingle{}identificador del fill dret del clúster 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_cluster_addf8d8d2beb59cf5b5fd7e0eed491e7e}\label{class_cluster_addf8d8d2beb59cf5b5fd7e0eed491e7e}} 
+\index{Cluster@{Cluster}!llegir@{llegir}}
+\index{llegir@{llegir}!Cluster@{Cluster}}
+\subsubsection{\texorpdfstring{llegir()}{llegir()}}
+{\footnotesize\ttfamily void Cluster\+::llegir (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Operació de lectura. 
+
+\mbox{\Hypertarget{class_cluster_aae67c144fc543eace946dc8a651b5b7a}\label{class_cluster_aae67c144fc543eace946dc8a651b5b7a}} 
+\index{Cluster@{Cluster}!escriure@{escriure}}
+\index{escriure@{escriure}!Cluster@{Cluster}}
+\subsubsection{\texorpdfstring{escriure()}{escriure()}}
+{\footnotesize\ttfamily void Cluster\+::escriure (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Operació d\textquotesingle{}escriptura. 
+
+\begin{DoxyPrecond}{Precondition}
+{\itshape cert} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+S\textquotesingle{}han escrit els atributs del paràmetre implícit al canal standard de sortida. 
+\end{DoxyPostcond}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_cluster_8hh}{Cluster.\+hh}\end{DoxyCompactItemize}

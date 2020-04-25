@@ -1,0 +1,184 @@
+\hypertarget{class_cjt__clusters}{}\section{Cjt\+\_\+clusters Class Reference}
+\label{class_cjt__clusters}\index{Cjt\+\_\+clusters@{Cjt\+\_\+clusters}}
+
+
+Representa un conjunt de clústers.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_cjt__clusters_a10dd63eab0e8ea5b1ed13e81412d47a9}{Cjt\+\_\+clusters} ()
+\begin{DoxyCompactList}\small\item\em Creadora per defecte. \end{DoxyCompactList}\item 
+\hyperlink{class_cjt__clusters_aa52c1e5013ed206efccd70aaba9c037c}{Cjt\+\_\+clusters} (\hyperlink{class_cjt__especies}{Cjt\+\_\+especies} cesp)
+\begin{DoxyCompactList}\small\item\em Creadora a partir d\textquotesingle{}un conjunt d\textquotesingle{}espècies. \end{DoxyCompactList}\item 
+\hyperlink{class_cjt__clusters_aba7f00077ce77ba7963ac8084be4a000}{$\sim$\+Cjt\+\_\+clusters} ()
+\begin{DoxyCompactList}\small\item\em Destructora per defecte. \end{DoxyCompactList}\item 
+void \hyperlink{class_cjt__clusters_ae5d7fd65b9070ea2e7240d78fefd0f6e}{wpgma\+\_\+pas} ()
+\begin{DoxyCompactList}\small\item\em Modificadora que aplica un pas de l\textquotesingle{}algorisme W\+P\+G\+MA. \end{DoxyCompactList}\item 
+void \hyperlink{class_cjt__clusters_a755fca978c7d4b499e2c7b0963136354}{wpgma\+\_\+total} ()
+\begin{DoxyCompactList}\small\item\em Modificadora que aplica l\textquotesingle{}algorisme W\+P\+G\+MA. \end{DoxyCompactList}\item 
+void \hyperlink{class_cjt__clusters_ab243c775e0e2d64905ce744490d2f898}{taula\+\_\+distancies\+\_\+clusters} () const
+\begin{DoxyCompactList}\small\item\em Consultora de taula de distàncies entre clústers. \end{DoxyCompactList}\item 
+void \hyperlink{class_cjt__clusters_a0c0922c708fb014720a53bd560ebed61}{inicialitza\+\_\+cluster} (const \hyperlink{class_cjt__especies}{Cjt\+\_\+especies} \&cesp)
+\begin{DoxyCompactList}\small\item\em Inicialitza el conjunt de clústers. \end{DoxyCompactList}\item 
+void \hyperlink{class_cjt__clusters_ad023ea2a94f2629848f5c6b7162ac8d8}{escriure\+\_\+cluster} (const string \&id) const
+\begin{DoxyCompactList}\small\item\em Operació d\textquotesingle{}escriptura de clúster. \end{DoxyCompactList}\item 
+void \hyperlink{class_cjt__clusters_afdef4a4f7bd8ca2ecaf723c65cc10be0}{escriure\+\_\+arbre} () const
+\begin{DoxyCompactList}\small\item\em Operació d\textquotesingle{}escriptura de l\textquotesingle{}arbre filogenètic. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Representa un conjunt de clústers. 
+
+Definition at line 17 of file Cjt\+\_\+clusters.\+hh.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_cjt__clusters_a10dd63eab0e8ea5b1ed13e81412d47a9}\label{class_cjt__clusters_a10dd63eab0e8ea5b1ed13e81412d47a9}} 
+\index{Cjt\+\_\+clusters@{Cjt\+\_\+clusters}!Cjt\+\_\+clusters@{Cjt\+\_\+clusters}}
+\index{Cjt\+\_\+clusters@{Cjt\+\_\+clusters}!Cjt\+\_\+clusters@{Cjt\+\_\+clusters}}
+\subsubsection{\texorpdfstring{Cjt\+\_\+clusters()}{Cjt\_clusters()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Cjt\+\_\+clusters\+::\+Cjt\+\_\+clusters (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creadora per defecte. 
+
+\begin{DoxyPrecond}{Precondition}
+{\itshape cert} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+El resultat és un conjunt de clústers buit 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_cjt__clusters_aa52c1e5013ed206efccd70aaba9c037c}\label{class_cjt__clusters_aa52c1e5013ed206efccd70aaba9c037c}} 
+\index{Cjt\+\_\+clusters@{Cjt\+\_\+clusters}!Cjt\+\_\+clusters@{Cjt\+\_\+clusters}}
+\index{Cjt\+\_\+clusters@{Cjt\+\_\+clusters}!Cjt\+\_\+clusters@{Cjt\+\_\+clusters}}
+\subsubsection{\texorpdfstring{Cjt\+\_\+clusters()}{Cjt\_clusters()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Cjt\+\_\+clusters\+::\+Cjt\+\_\+clusters (\begin{DoxyParamCaption}\item[{\hyperlink{class_cjt__especies}{Cjt\+\_\+especies}}]{cesp }\end{DoxyParamCaption})}
+
+
+
+Creadora a partir d\textquotesingle{}un conjunt d\textquotesingle{}espècies. 
+
+\begin{DoxyPrecond}{Precondition}
+\char`\"{}cesp\char`\"{} és un conjunt d\textquotesingle{}espècies no buit 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+El resultat és un conjunt de clústers format a partir de les espècies del conjunt d\textquotesingle{}espècies \char`\"{}cesp\char`\"{} 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_cjt__clusters_aba7f00077ce77ba7963ac8084be4a000}\label{class_cjt__clusters_aba7f00077ce77ba7963ac8084be4a000}} 
+\index{Cjt\+\_\+clusters@{Cjt\+\_\+clusters}!````~Cjt\+\_\+clusters@{$\sim$\+Cjt\+\_\+clusters}}
+\index{````~Cjt\+\_\+clusters@{$\sim$\+Cjt\+\_\+clusters}!Cjt\+\_\+clusters@{Cjt\+\_\+clusters}}
+\subsubsection{\texorpdfstring{$\sim$\+Cjt\+\_\+clusters()}{~Cjt\_clusters()}}
+{\footnotesize\ttfamily Cjt\+\_\+clusters\+::$\sim$\+Cjt\+\_\+clusters (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructora per defecte. 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_cjt__clusters_ae5d7fd65b9070ea2e7240d78fefd0f6e}\label{class_cjt__clusters_ae5d7fd65b9070ea2e7240d78fefd0f6e}} 
+\index{Cjt\+\_\+clusters@{Cjt\+\_\+clusters}!wpgma\+\_\+pas@{wpgma\+\_\+pas}}
+\index{wpgma\+\_\+pas@{wpgma\+\_\+pas}!Cjt\+\_\+clusters@{Cjt\+\_\+clusters}}
+\subsubsection{\texorpdfstring{wpgma\+\_\+pas()}{wpgma\_pas()}}
+{\footnotesize\ttfamily void Cjt\+\_\+clusters\+::wpgma\+\_\+pas (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Modificadora que aplica un pas de l\textquotesingle{}algorisme W\+P\+G\+MA. 
+
+\begin{DoxyPrecond}{Precondition}
+El paràmetre implícit està format per dos o més clústers 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+El resultat és un conjunt de clústers modificat al aplicar un pas de l\textquotesingle{}algorisme W\+P\+G\+MA 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_cjt__clusters_a755fca978c7d4b499e2c7b0963136354}\label{class_cjt__clusters_a755fca978c7d4b499e2c7b0963136354}} 
+\index{Cjt\+\_\+clusters@{Cjt\+\_\+clusters}!wpgma\+\_\+total@{wpgma\+\_\+total}}
+\index{wpgma\+\_\+total@{wpgma\+\_\+total}!Cjt\+\_\+clusters@{Cjt\+\_\+clusters}}
+\subsubsection{\texorpdfstring{wpgma\+\_\+total()}{wpgma\_total()}}
+{\footnotesize\ttfamily void Cjt\+\_\+clusters\+::wpgma\+\_\+total (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Modificadora que aplica l\textquotesingle{}algorisme W\+P\+G\+MA. 
+
+\begin{DoxyPrecond}{Precondition}
+El paràmetre implícit està format per dos o més clústers 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+El resultat és conjunt de clústers que conté un únic clúster format per totes les especies, resultat d\textquotesingle{}aplicar l\textquotesingle{}algorisme W\+P\+G\+MA totes les vegades possibles 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_cjt__clusters_ab243c775e0e2d64905ce744490d2f898}\label{class_cjt__clusters_ab243c775e0e2d64905ce744490d2f898}} 
+\index{Cjt\+\_\+clusters@{Cjt\+\_\+clusters}!taula\+\_\+distancies\+\_\+clusters@{taula\+\_\+distancies\+\_\+clusters}}
+\index{taula\+\_\+distancies\+\_\+clusters@{taula\+\_\+distancies\+\_\+clusters}!Cjt\+\_\+clusters@{Cjt\+\_\+clusters}}
+\subsubsection{\texorpdfstring{taula\+\_\+distancies\+\_\+clusters()}{taula\_distancies\_clusters()}}
+{\footnotesize\ttfamily void Cjt\+\_\+clusters\+::taula\+\_\+distancies\+\_\+clusters (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Consultora de taula de distàncies entre clústers. 
+
+\begin{DoxyPrecond}{Precondition}
+{\itshape cert} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+El resultat és la taula de distàncies entre tots els clústers del paràmetre implícit 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_cjt__clusters_a0c0922c708fb014720a53bd560ebed61}\label{class_cjt__clusters_a0c0922c708fb014720a53bd560ebed61}} 
+\index{Cjt\+\_\+clusters@{Cjt\+\_\+clusters}!inicialitza\+\_\+cluster@{inicialitza\+\_\+cluster}}
+\index{inicialitza\+\_\+cluster@{inicialitza\+\_\+cluster}!Cjt\+\_\+clusters@{Cjt\+\_\+clusters}}
+\subsubsection{\texorpdfstring{inicialitza\+\_\+cluster()}{inicialitza\_cluster()}}
+{\footnotesize\ttfamily void Cjt\+\_\+clusters\+::inicialitza\+\_\+cluster (\begin{DoxyParamCaption}\item[{const \hyperlink{class_cjt__especies}{Cjt\+\_\+especies} \&}]{cesp }\end{DoxyParamCaption})}
+
+
+
+Inicialitza el conjunt de clústers. 
+
+\begin{DoxyPrecond}{Precondition}
+\char`\"{}cesp\char`\"{} es un conjunt d\textquotesingle{}espècies no buit 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+El resultat es un conjunt de clústers inicialitzat a partir de les espècies del conjunt d\textquotesingle{}espècies \char`\"{}cesp\char`\"{} 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_cjt__clusters_ad023ea2a94f2629848f5c6b7162ac8d8}\label{class_cjt__clusters_ad023ea2a94f2629848f5c6b7162ac8d8}} 
+\index{Cjt\+\_\+clusters@{Cjt\+\_\+clusters}!escriure\+\_\+cluster@{escriure\+\_\+cluster}}
+\index{escriure\+\_\+cluster@{escriure\+\_\+cluster}!Cjt\+\_\+clusters@{Cjt\+\_\+clusters}}
+\subsubsection{\texorpdfstring{escriure\+\_\+cluster()}{escriure\_cluster()}}
+{\footnotesize\ttfamily void Cjt\+\_\+clusters\+::escriure\+\_\+cluster (\begin{DoxyParamCaption}\item[{const string \&}]{id }\end{DoxyParamCaption}) const}
+
+
+
+Operació d\textquotesingle{}escriptura de clúster. 
+
+\begin{DoxyPrecond}{Precondition}
+\char`\"{}id\char`\"{} és l\textquotesingle{}identificador d\textquotesingle{}un clúster que pertany al paràmetre implícit 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+S\textquotesingle{}han escrit els atributs del paràmetre implícit del clúster al canal standard de sortida. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_cjt__clusters_afdef4a4f7bd8ca2ecaf723c65cc10be0}\label{class_cjt__clusters_afdef4a4f7bd8ca2ecaf723c65cc10be0}} 
+\index{Cjt\+\_\+clusters@{Cjt\+\_\+clusters}!escriure\+\_\+arbre@{escriure\+\_\+arbre}}
+\index{escriure\+\_\+arbre@{escriure\+\_\+arbre}!Cjt\+\_\+clusters@{Cjt\+\_\+clusters}}
+\subsubsection{\texorpdfstring{escriure\+\_\+arbre()}{escriure\_arbre()}}
+{\footnotesize\ttfamily void Cjt\+\_\+clusters\+::escriure\+\_\+arbre (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Operació d\textquotesingle{}escriptura de l\textquotesingle{}arbre filogenètic. 
+
+\begin{DoxyPrecond}{Precondition}
+{\itshape cert} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+S\textquotesingle{}ha escrit l\textquotesingle{}estructura arborescent amb els identificadors dels clústers i les distàncies entre clústers del paràmetre implícit, al canal standard de sortida. 
+\end{DoxyPostcond}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_cjt__clusters_8hh}{Cjt\+\_\+clusters.\+hh}\end{DoxyCompactItemize}

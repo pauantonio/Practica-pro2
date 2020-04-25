@@ -1,0 +1,142 @@
+\hypertarget{class_especie}{}\section{Especie Class Reference}
+\label{class_especie}\index{Especie@{Especie}}
+
+
+Representa una entitat o espècie amb atributs identificador i gen.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_especie_af820c686aa53f39507b5e1662868789f}{Especie} (string id, string gen)
+\begin{DoxyCompactList}\small\item\em Creadora amb valors concrets. \end{DoxyCompactList}\item 
+\hyperlink{class_especie_abd21378dde6e8348d823c6f87a1c0658}{$\sim$\+Especie} ()
+\begin{DoxyCompactList}\small\item\em Destructora per defecte. \end{DoxyCompactList}\item 
+string \hyperlink{class_especie_a1652f05cd2ff7dc71123bf538ecc4476}{consultar\+\_\+id} () const
+\begin{DoxyCompactList}\small\item\em Consultora de l\textquotesingle{}identificador. \end{DoxyCompactList}\item 
+string \hyperlink{class_especie_a850af2b59a21e2d801c59d76ba5c1a98}{consultar\+\_\+gen} () const
+\begin{DoxyCompactList}\small\item\em Consultora del gen. \end{DoxyCompactList}\item 
+vector$<$ string $>$ \hyperlink{class_especie_a942d65fe47049ce8fb9330e29455f5f5}{consultar\+\_\+kmer} () const
+\begin{DoxyCompactList}\small\item\em Consultora del conjunt kmer. \end{DoxyCompactList}\item 
+void \hyperlink{class_especie_a7384add391d2684c4fb6bdf8a535fba3}{llegir} ()
+\begin{DoxyCompactList}\small\item\em Operació de lectura. \end{DoxyCompactList}\item 
+void \hyperlink{class_especie_ae24802ae0746b2560a48eea40f64760e}{escriure} () const
+\begin{DoxyCompactList}\small\item\em Operació d\textquotesingle{}escriptura. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Representa una entitat o espècie amb atributs identificador i gen. 
+
+Definition at line 16 of file Especie.\+hh.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_especie_af820c686aa53f39507b5e1662868789f}\label{class_especie_af820c686aa53f39507b5e1662868789f}} 
+\index{Especie@{Especie}!Especie@{Especie}}
+\index{Especie@{Especie}!Especie@{Especie}}
+\subsubsection{\texorpdfstring{Especie()}{Especie()}}
+{\footnotesize\ttfamily Especie\+::\+Especie (\begin{DoxyParamCaption}\item[{string}]{id,  }\item[{string}]{gen }\end{DoxyParamCaption})}
+
+
+
+Creadora amb valors concrets. 
+
+\begin{DoxyPrecond}{Precondition}
+Identificador \char`\"{}id\char`\"{} i gen \char`\"{}gen\char`\"{} no buits 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+El resultat és una especie amb identificador \char`\"{}id\char`\"{}, gen \char`\"{}gen\char`\"{}. També es calcula el vector kmer. 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_especie_abd21378dde6e8348d823c6f87a1c0658}\label{class_especie_abd21378dde6e8348d823c6f87a1c0658}} 
+\index{Especie@{Especie}!````~Especie@{$\sim$\+Especie}}
+\index{````~Especie@{$\sim$\+Especie}!Especie@{Especie}}
+\subsubsection{\texorpdfstring{$\sim$\+Especie()}{~Especie()}}
+{\footnotesize\ttfamily Especie\+::$\sim$\+Especie (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructora per defecte. 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_especie_a1652f05cd2ff7dc71123bf538ecc4476}\label{class_especie_a1652f05cd2ff7dc71123bf538ecc4476}} 
+\index{Especie@{Especie}!consultar\+\_\+id@{consultar\+\_\+id}}
+\index{consultar\+\_\+id@{consultar\+\_\+id}!Especie@{Especie}}
+\subsubsection{\texorpdfstring{consultar\+\_\+id()}{consultar\_id()}}
+{\footnotesize\ttfamily string Especie\+::consultar\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Consultora de l\textquotesingle{}identificador. 
+
+\begin{DoxyPrecond}{Precondition}
+{\itshape cert} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+El resultat és l\textquotesingle{}identificador del paràmetre implícit 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_especie_a850af2b59a21e2d801c59d76ba5c1a98}\label{class_especie_a850af2b59a21e2d801c59d76ba5c1a98}} 
+\index{Especie@{Especie}!consultar\+\_\+gen@{consultar\+\_\+gen}}
+\index{consultar\+\_\+gen@{consultar\+\_\+gen}!Especie@{Especie}}
+\subsubsection{\texorpdfstring{consultar\+\_\+gen()}{consultar\_gen()}}
+{\footnotesize\ttfamily string Especie\+::consultar\+\_\+gen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Consultora del gen. 
+
+\begin{DoxyPrecond}{Precondition}
+{\itshape cert} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+El resultat és el gen del paràmetre implícit 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_especie_a942d65fe47049ce8fb9330e29455f5f5}\label{class_especie_a942d65fe47049ce8fb9330e29455f5f5}} 
+\index{Especie@{Especie}!consultar\+\_\+kmer@{consultar\+\_\+kmer}}
+\index{consultar\+\_\+kmer@{consultar\+\_\+kmer}!Especie@{Especie}}
+\subsubsection{\texorpdfstring{consultar\+\_\+kmer()}{consultar\_kmer()}}
+{\footnotesize\ttfamily vector$<$string$>$ Especie\+::consultar\+\_\+kmer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Consultora del conjunt kmer. 
+
+\begin{DoxyPrecond}{Precondition}
+{\itshape cert} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+El resultat és el conjunt kmer del paràmetre implícit 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{class_especie_a7384add391d2684c4fb6bdf8a535fba3}\label{class_especie_a7384add391d2684c4fb6bdf8a535fba3}} 
+\index{Especie@{Especie}!llegir@{llegir}}
+\index{llegir@{llegir}!Especie@{Especie}}
+\subsubsection{\texorpdfstring{llegir()}{llegir()}}
+{\footnotesize\ttfamily void Especie\+::llegir (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Operació de lectura. 
+
+\mbox{\Hypertarget{class_especie_ae24802ae0746b2560a48eea40f64760e}\label{class_especie_ae24802ae0746b2560a48eea40f64760e}} 
+\index{Especie@{Especie}!escriure@{escriure}}
+\index{escriure@{escriure}!Especie@{Especie}}
+\subsubsection{\texorpdfstring{escriure()}{escriure()}}
+{\footnotesize\ttfamily void Especie\+::escriure (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Operació d\textquotesingle{}escriptura. 
+
+\begin{DoxyPrecond}{Precondition}
+{\itshape cert} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+S\textquotesingle{}han escrit els atributs del paràmetre implícit al canal standard de sortida. 
+\end{DoxyPostcond}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_especie_8hh}{Especie.\+hh}\end{DoxyCompactItemize}

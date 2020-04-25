@@ -1,0 +1,121 @@
+\hypertarget{main_8cc}{}\section{main.\+cc File Reference}
+\label{main_8cc}\index{main.\+cc@{main.\+cc}}
+
+
+Programa principal de la {\itshape Construcció d\textquotesingle{}un arbre filogenètic}.  
+
+
+Include dependency graph for main.\+cc\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=207pt]{main_8cc__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{main_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\begin{DoxyCompactList}\small\item\em Programa principal de la {\itshape Construcció d\textquotesingle{}un arbre filogenètic}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Programa principal de la {\itshape Construcció d\textquotesingle{}un arbre filogenètic}. 
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{main_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{main.\+cc@{main.\+cc}!main@{main}}
+\index{main@{main}!main.\+cc@{main.\+cc}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Programa principal de la {\itshape Construcció d\textquotesingle{}un arbre filogenètic}. 
+
+
+
+Definition at line 22 of file main.\+cc.
+
+
+\begin{DoxyCode}
+22            \{
+23     \textcolor{keywordtype}{int} k;
+24     cin >> k;
+25 
+26     \hyperlink{class_cjt__especies}{Cjt\_especies} cesp(k);
+27     \hyperlink{class_cjt__clusters}{Cjt\_clusters} cclu;
+28 
+29     \textcolor{keywordtype}{string} opcio;
+30     cin >> opcio;
+31 
+32     \textcolor{keywordflow}{while} (opcio != \textcolor{stringliteral}{"fin"}) \{
+33         \textcolor{keywordflow}{if} (opcio == \textcolor{stringliteral}{"crea\_especie"}) \{
+34             \textcolor{keywordtype}{string} id, gen;
+35             cin >> \textcolor{keywordtype}{id} >> gen;
+36             \hyperlink{class_especie}{Especie} esp (\textcolor{keywordtype}{id}, gen);
+37             cesp.crea\_especie(esp);
+38         \}
+39 
+40         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (opcio == \textcolor{stringliteral}{"obtener\_gen"}) \{
+41             \textcolor{keywordtype}{string} id;
+42             cin >> id;
+43             cesp.consultar\_especie(\textcolor{keywordtype}{id}).consultar\_gen();
+44         \}
+45 
+46         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (opcio == \textcolor{stringliteral}{"distancia"}) \{
+47             \textcolor{keywordtype}{string} id1, id2;
+48             cin >> id1 >> id2;
+49             cesp.distancia(id1, id2);
+50         \}
+51 
+52         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (opcio == \textcolor{stringliteral}{"elimina\_especie"}) \{
+53             \textcolor{keywordtype}{string} id;
+54             cesp.elimina\_especie(\textcolor{keywordtype}{id});
+55         \}
+56 
+57         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (opcio == \textcolor{stringliteral}{"existe\_especie"}) \{
+58             \textcolor{keywordtype}{string} id;
+59             cesp.existeix\_especie(\textcolor{keywordtype}{id});
+60         \}
+61 
+62         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (opcio == \textcolor{stringliteral}{"lee\_cjt\_especies"}) \{
+63             \textcolor{keywordtype}{int} n;
+64             cesp.llegir(n);
+65         \}
+66 
+67         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (opcio == \textcolor{stringliteral}{"imprime\_cjt\_especies"}) \{
+68             cesp.escriure();
+69         \}
+70 
+71         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (opcio == \textcolor{stringliteral}{"tabla\_distancias"}) \{
+72             cesp.taula\_distancies();
+73         \}
+74 
+75         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (opcio == \textcolor{stringliteral}{"inicializa\_clusters"}) \{
+76             cclu.\hyperlink{class_cjt__clusters_a0c0922c708fb014720a53bd560ebed61}{inicialitza\_cluster}(cesp);
+77             cclu.\hyperlink{class_cjt__clusters_ab243c775e0e2d64905ce744490d2f898}{taula\_distancies\_clusters}();
+78         \}
+79 
+80         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (opcio == \textcolor{stringliteral}{"ejecuta\_paso\_wpgma"}) \{
+81             cclu.\hyperlink{class_cjt__clusters_ae5d7fd65b9070ea2e7240d78fefd0f6e}{wpgma\_pas}();
+82             cclu.\hyperlink{class_cjt__clusters_ab243c775e0e2d64905ce744490d2f898}{taula\_distancies\_clusters}();
+83         \}
+84 
+85         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (opcio == \textcolor{stringliteral}{"imprime\_cluster"}) \{
+86             \textcolor{keywordtype}{string} id;
+87             cclu.\hyperlink{class_cjt__clusters_ad023ea2a94f2629848f5c6b7162ac8d8}{escriure\_cluster}(\textcolor{keywordtype}{id});
+88         \}
+89 
+90         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (opcio == \textcolor{stringliteral}{"imprime\_arbol\_filogenetico"}) \{
+91             cclu.\hyperlink{class_cjt__clusters_a0c0922c708fb014720a53bd560ebed61}{inicialitza\_cluster}(cesp);
+92             cclu.\hyperlink{class_cjt__clusters_a755fca978c7d4b499e2c7b0963136354}{wpgma\_total}();
+93             cclu.\hyperlink{class_cjt__clusters_afdef4a4f7bd8ca2ecaf723c65cc10be0}{escriure\_arbre}();
+94         \}
+95 
+96         cin >> opcio;
+97     \}
+98 \}
+\end{DoxyCode}
