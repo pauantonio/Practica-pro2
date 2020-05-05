@@ -5,9 +5,12 @@
 #ifndef ESP_HH
 #define ESP_HH
 
+using namespace std;
+
 #ifndef NO_DIAGRAM
+#include <iostream>
 #include <string>
-#include <vector>
+#include <map>
 #endif
 
 /** @class Especie
@@ -16,9 +19,8 @@
 class Especie {
 
 private:
-    string id;
     string gen;
-    vector<string> kmer;
+    map<string, int> kmer;
 
 public: 
     //Constructora
@@ -28,7 +30,7 @@ public:
       \pre Identificador "id" i gen "gen" no buits
       \post El resultat és una especie amb identificador "id", gen "gen". També es calcula el vector kmer.
     */ 
-    Especie (string id, string gen);
+    Especie (string gen, int k);
 
     //Destructora
 
@@ -37,13 +39,6 @@ public:
     ~Especie();
 
     //Consultores
-    
-    /** @brief Consultora de l'identificador 
-
-      \pre <em>cert</em>
-      \post El resultat és l'identificador del paràmetre implícit
-    */ 
-    string consultar_id() const;
     
     /** @brief Consultora del gen 
 
@@ -57,20 +52,7 @@ public:
       \pre <em>cert</em>
       \post El resultat és el conjunt kmer del paràmetre implícit
     */ 
-    vector<string> consultar_kmer() const;
-
-    //Llegir i escriptura
-    
-    /** @brief Operació de lectura
-    */
-    void llegir();
-
-    /** @brief Operació d'escriptura
-
-      \pre <em>cert</em>
-      \post S'han escrit els atributs del paràmetre implícit al canal standard de sortida. 
-    */
-    void escriure() const;
+    map<string, int> consultar_kmer() const;
 };
 
 #endif
