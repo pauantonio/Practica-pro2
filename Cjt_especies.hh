@@ -6,9 +6,13 @@
 #define CONJ_ESP_HH
 
 #include "Especie.hh"
+using namespace std;
 
 #ifndef NO_DIAGRAM
+#include <iostream>
 #include <map>
+#include <vector>
+#include <string>
 #endif
 
 /** @class Cjt_especies
@@ -18,7 +22,7 @@ class Cjt_especies {
 
 private:
     map<string, Especie> cesp;
-    vector <vector<double>> taula;
+    map<string, map<string, double>> taula;
     static int k;
 
 public:
@@ -41,10 +45,10 @@ public:
 
     /** @brief Modificadora que crea una espècie
 
-      \pre La espècie "esp" no forma part del conjunt d'espècies del paràmetre implícit
-      \post Es modifica el conjunt d'espècies del paràmetre implícit amb la unió de la espècie "esp"
+      \pre La espècie amb identificador "id" no forma part del conjunt d'espècies del paràmetre implícit
+      \post Es modifica el conjunt d'espècies del paràmetre implícit amb la unió de la espècie amb identificador "id" i gen "gen"
     */
-    void crea_especie(const Especie& esp);
+    void crea_especie(const string& id, const string& gen);
 
     /** @brief Modificadora que elimina una espècie
 
@@ -54,6 +58,20 @@ public:
     void elimina_especie(const string& id);
 
     //Consultores
+
+    /** @brief Consultora de la pertanyença de la espècie amb identificador "id"
+
+      \pre L'identificador "id" és l'identificador d'una espècie
+      \post El resultat és cert si la espècie amb identificador "id" pertany al paràmetre implícit, o fals en cas contrari
+    */
+    bool pertany(string id) const;
+
+    /** @brief Consultora del gen de la espècie amb identificador "id"
+
+      \pre L'identificador "id" és l'identificador d'una espècie del paràmetre implícit
+      \post El resultat és el gen de la espècie del paràmetre implícit amb identificador "id"
+    */
+    void consultar_gen(string id) const;
 
     /** @brief Consultora de la espècie amb identificador "id"
 
@@ -81,7 +99,7 @@ public:
       \pre <em>cert</em>
       \post El resultat és la taula de distàncies entre totes les espècies del paràmetre implícit 
     */
-    void taula_distancies() const;
+    void taula_distancies();
 
     //Llegir i escriure
 
@@ -97,6 +115,13 @@ public:
       \post S'han escrit els atributs identificador i gen de totes les espècies del paràmetre implícit al canal standard de sortida. 
     */
     void escriure() const;
+
+    /** @brief Operació d'escriptura de la taula de distàncies
+
+      \pre <em>cert</em>
+      \post S'han escrit els atributs identificador i distància de totes les espècies del paràmetre implícit respecte a les altres espècies al canal standard de sortida. 
+    */
+    void escriure_taula() const;
 };
 
 #endif
