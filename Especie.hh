@@ -14,12 +14,14 @@ using namespace std;
 #endif
 
 /** @class Especie
-    @brief Representa una entitat o espècie amb atributs identificador i gen
+    @brief Representa el conjunt de característiques i operacions de les espècies
 */
 class Especie {
 
 private:
+    /** @brief Gen de la espècie */
     string gen;
+    /** @brief Conjunt de subseqüències del gen de tamany k */
     map<string, int> kmer;
 
 public: 
@@ -27,10 +29,10 @@ public:
 
     /** @brief Creadora amb valors concrets 
 
-      \pre Identificador "id" i gen "gen" no buits
-      \post El resultat és una especie amb identificador "id", gen "gen". També es calcula el vector kmer.
+      \pre Gen "gen" no buit i "k" >= 1
+      \post El resultat és una especie amb gen "gen". També es calcula el vector kmer donat el paràmetre "k"
     */ 
-    Especie (string gen, int k);
+    Especie (const string& gen, const int& k);
 
     //Destructora
 
@@ -43,16 +45,16 @@ public:
     /** @brief Consultora del gen 
 
       \pre <em>cert</em>
-      \post El resultat és el gen del paràmetre implícit
+      \post Es retorna el "gen" del paràmetre implícit
     */ 
     string consultar_gen() const;
-    
-    /** @brief Consultora del conjunt kmer 
 
-      \pre <em>cert</em>
-      \post El resultat és el conjunt kmer del paràmetre implícit
+    /** @brief Calcular distància
+
+      \pre Les espècies "e1" i "e2" no són buides
+      \post Es retorna la distància entre les dues espècies, utilitzant el "kmer" del paràmetre implícit
     */ 
-    map<string, int> consultar_kmer() const;
+    static double consultar_distancia(const Especie& e1, const Especie& e2);
 };
 
 #endif

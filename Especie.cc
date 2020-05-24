@@ -1,6 +1,6 @@
 #include "Especie.hh"
 
-Especie::Especie (string gen, int k) {
+Especie::Especie (const string& gen, const int& k) {
     this->gen = gen;
     
     map<string, int> kmer;
@@ -21,6 +21,43 @@ string Especie::consultar_gen() const {
     return gen;
 }
 
-map<string, int> Especie::consultar_kmer() const {
-    return kmer;
+double Especie::consultar_distancia(const Especie& e1, const Especie& e2) {
+    double num = 0;
+    double div = 0;
+
+    map<string, int>::const_iterator it1 = e1.kmer.begin();
+    map<string, int>::const_iterator it2 = e2.kmer.begin();
+
+    while (it1 != e1.kmer.end() and it2 != e2.kmer.end()) {
+        if (it1->first == it2->first) {
+            num += min(it1->second, it2->second);
+            div += max(it1->second, it2->second);
+            ++it1;
+            ++it2;
+        }
+        else if (it1->first < it2->first) {
+            div += it1->second;
+            ++it1;
+        }
+        else {
+            div += it2->second;
+            ++it2;
+        }
+    }
+
+    if (it1 != e1.kmer.end()) {
+        while (it1 != e1.kmer.end()) {
+            div += it1->second;
+            ++it1;
+        }
+    }
+
+    else {
+        while (it2 != e2.kmer.end()) {
+            div += it2->second;
+            ++it2;
+        }
+    }
+
+    return (1 - num/div)*100;
 }
