@@ -6,18 +6,24 @@
 #define CONJ_CLU_HH
 
 #include "Cluster.hh"
+#include "Cjt_especies.hh"
+#include "Taula_distancies.hh"
+using namespace std;
 
 #ifndef NO_DIAGRAM
-#include <set>
+#include <map>
+#include <iostream>
 #endif
 
 /** @class Cjt_clusters
-    @brief Representa un conjunt de clústers
+    @brief Representa el conjunt de característiques i operacions d'un conjunt de clústers
 */
 class Cjt_clusters{
 private: 
-    set <Cluster> cclu;
-    vector <vector<double>> taula;
+    /** @brief Emmagatzema el conjunt de clústers */
+    map <string, Cluster> cclu;
+    /** @brief Emmagatzema la taula de distàncies entre els diferents clústers del conjunt */
+    Taula_distancies taula;
 
 public:
     //Constructora
@@ -29,13 +35,6 @@ public:
     */ 
     Cjt_clusters();
 
-    /** @brief Creadora a partir d'un conjunt d'espècies 
-
-      \pre "cesp" és un conjunt d'espècies no buit
-      \post El resultat és un conjunt de clústers format a partir de les espècies del conjunt d'espècies "cesp"
-    */ 
-    Cjt_clusters(Cjt_especies cesp);
-
     //Destructora
 
     /** @brief Destructora per defecte 
@@ -46,40 +45,43 @@ public:
 
     /** @brief Modificadora que aplica un pas de l'algorisme WPGMA
 
-      \pre El paràmetre implícit està format per dos o més clústers
+      \pre El conjunt de clústers del paràmetre implícit està format per dos o més clústers
       \post El resultat és un conjunt de clústers modificat al aplicar un pas de l'algorisme WPGMA
     */
-    void wpgma_pas();
+    void pas_wpgma();
 
-    /** @brief Modificadora que aplica l'algorisme WPGMA
+    //Consultores
 
-      \pre El paràmetre implícit està format per dos o més clústers
-      \post El resultat és conjunt de clústers que conté un únic clúster format per totes les especies, resultat d'aplicar l'algorisme WPGMA totes les vegades possibles
-    */
-    void wpgma_total();
-    
-    //Consultora
-
-    /** @brief Consultora de taula de distàncies entre clústers
+    /** @brief Consultora del tamany del conjunt
 
       \pre <em>cert</em>
-      \post El resultat és la taula de distàncies entre tots els clústers del paràmetre implícit 
+      \post Retorna el tamany del conjunt de clústers del paràmetre implícit
     */
-    void taula_distancies_clusters() const;
+    double consultar_tamany() const;
 
-    //Llegir i escriure
+    /** @brief Consultora de pertanyença
+
+      \pre L'identificador "id" no és buit
+      \post Es retorna cert si la espècie amb identificador "id" pertany al conjunt d'espècies del paràmetre implícit, o fals en cas contrari
+    */
+    bool pertany(const string& id) const;
+
+    
+    //Llegir
 
     /** @brief Inicialitza el conjunt de clústers
 
       \pre "cesp" es un conjunt d'espècies no buit
-      \post El resultat es un conjunt de clústers inicialitzat a partir de les espècies del conjunt d'espècies "cesp"
+      \post El resultat és el conjunt de clústers del paràmetre implícit inicialitzat a partir de les espècies del conjunt d'espècies "cesp"
     */ 
-    void inicialitza_cluster(const Cjt_especies& cesp);
+    void inicialitza_cluster(Cjt_especies cesp);
+
+    //Escriure
 
     /** @brief Operació d'escriptura de clúster
 
-      \pre "id" és l'identificador d'un clúster que pertany al paràmetre implícit
-      \post S'han escrit els atributs del paràmetre implícit del clúster al canal standard de sortida. 
+      \pre "id" és l'identificador d'un clúster que pertany al conjunt de clústers del paràmetre implícit
+      \post S'han escrit els atributs del paràmetre implícit del clúster
     */
     void escriure_cluster(const string& id) const;
 
@@ -88,7 +90,14 @@ public:
       \pre <em>cert</em>
       \post S'ha escrit l'estructura arborescent amb els identificadors dels clústers i les distàncies entre clústers del paràmetre implícit, al canal standard de sortida. 
     */
-    void escriure_arbre() const;
+    void escriure_arbre();
+    
+    /** @brief Operació d'escriptura de taula de distàncies entre clústers
+
+      \pre <em>cert</em>
+      \post S'ha escrit la taula de distàncies entre tots els clústers del paràmetre implícit 
+    */
+    void escriure_taula() const;
 };
 
 #endif
